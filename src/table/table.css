@@ -1,0 +1,31 @@
+.tableClass {
+    display:inline;
+}
+
+table, th, td {
+    border: 2px black solid;
+    border-collapse: collapse;
+}
+th{
+    color: blue;
+    padding: 7px 3px;
+}
+
+#descriptionId {
+    padding: 7px 5px;
+}
+
+#dateId {
+    padding: 7px 5px;
+}
+
+#statusId {
+    padding: 7px 5px;
+}
+
+#buttonsTable {
+    border: 2px black solid;
+    background-color: white;
+    margin: 3px 2px;
+    padding: 1px 3px;
+}

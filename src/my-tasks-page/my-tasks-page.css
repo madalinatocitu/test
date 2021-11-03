@@ -1,0 +1,18 @@
+#title {
+    color: red;
+    border: 2px blue solid;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#myTasksPage {
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: stretch;
+}
+
+#class2 {
+    display: flex;
+    flex-direction: column;
+}
