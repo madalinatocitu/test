@@ -6,7 +6,7 @@ import './menu.css';
 class MenuPage extends React.Component {
     render() {
         return (
-            <div>
+            <div className="menu-page__container">
                 <ul>
                     <li>Home</li>
                     <li>My tasks</li>

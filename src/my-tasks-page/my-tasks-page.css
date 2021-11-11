@@ -1,18 +1,36 @@
-#title {
+html, body {
+    height: 100%;
+    /* width: 100%; */
+}
+
+#root {
+    height: 100%;
+    /* width: 100%; */
+}
+
+.my-tasks-page {
+    display: flex;
+    height: 100%;
+}
+
+.my-tasks-page__container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.my-tasks-page__title {
+    /* display: flex; */
     color: red;
     border: 2px blue solid;
     text-align: center;
+    align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-#myTasksPage {
+.my-tasks-page__table-and-form {
     display: flex;
-    /*flex-direction: row;*/
-    align-items: stretch;
-}
-
-#class2 {
-    display: flex;
-    flex-direction: column;
+    flex-flow: row;
+    justify-content: space-around;
 }

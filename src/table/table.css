@@ -1,14 +1,19 @@
-.tableClass {
-    display:inline;
+table {
+    width: 100%;
 }
 
 table, th, td {
     border: 2px black solid;
     border-collapse: collapse;
 }
+
 th{
     color: blue;
     padding: 7px 3px;
+}
+
+tr, td {
+    white-space: nowrap;
 }
 
 #descriptionId {

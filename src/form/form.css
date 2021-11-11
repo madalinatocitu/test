@@ -1,0 +1,39 @@
+.form__container {
+    border: 2px solid black;
+    display:flex;
+    flex-flow: column;
+    width: 100%;
+    margin-left: 5px;
+    padding: 10px;
+}
+
+label {
+    padding-top: 5px;
+    color: blue;
+}
+
+input {
+    margin-top: 8px;
+    border: 1.5px black solid;
+}
+
+.form__container__title {
+    padding-bottom: 10px;
+}
+
+#description, #date, #notes {
+    margin-left: 10px;
+}
+
+.form__button {
+    color: blue;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#button_id {
+    color:blue;
+    border: 1.5px solid black;
+    padding: 4px 15px;
+    background-color: white;
+}
