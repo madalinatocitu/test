@@ -34,7 +34,11 @@ class Table extends React.Component {
                                     </select>
                                 </td>
                                 <td>
-                                    <button id="buttonsTable" onClick={(e) => this.props.showInfo(e,i)}>O</button>
+                                    <button id="buttonsTable" 
+                                        onClick={(e) => {
+                                            this.props.showInfo(e,i);
+                                            this.props.showModal();
+                                        }}>O</button>
                                     <button id="buttonsTable">E</button>
                                     <button id="buttonsTable">D</button>
                                 </td>

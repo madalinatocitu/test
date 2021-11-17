@@ -55,9 +55,8 @@ class MyTasksPage extends React.Component {
         this.addNewTask = this.addNewTask.bind(this);
         this.handleUserInput = this.handleUserInput.bind(this);
         this.showInfo = this.showInfo.bind(this);
-        // this.showModal = this.showModal.bind(this);
+        this.showModal = this.showModal.bind(this);
         this.hideModal = this.hideModal.bind(this);
-        this.handleModal = this.handleModal.bind(this);
     }
 
     addNewTask(e) {
@@ -93,31 +92,29 @@ class MyTasksPage extends React.Component {
 
     showInfo(e, index) {
         console.log(this.state.table.items[index]);
-        console.log(this.state.isModalVisible);
         this.setState({
             selectedTask: this.state.table.items[index],
             isModalVisible: true
         });
         console.log("functioneaza");
-        console.log(this.state.isModalVisible);
+        // console.log(this.state.isModalVisible);
     }
 
-    // showModal() {
-    //     this.setState(
-    //         { isModalVisible: true }
-    //     );
-    // }
+    showModal() {
+        this.setState(
+            { isModalVisible: true }
+        );
+        console.log("modalul a aparut");
+        console.log(this.state.isModalVisible);
+    }
 
     hideModal() {
         this.setState(
             { isModalVisible: false }
         );
+        console.log("modalul a disparut");
+        // console.log(this.state.isModalVisible);
     }
-
-    handleModal() {
-        this.setState({ isModalVisible: !this.state.isModalVisible })
-    }
-
 
     render() {
         return (
@@ -126,12 +123,13 @@ class MyTasksPage extends React.Component {
                 <div className="my-tasks-page__container">
                     <h2 className="my-tasks-page__title">My tasks</h2>
                     <div className="my-tasks-page__table-and-form">
-                        <Table items={this.state.table.items} showInfo={this.showInfo} />
+                        <Table items={this.state.table.items} showInfo={this.showInfo} showModal={this.showModal}/>
                         <Form newItem={this.state.form} handleUserInput={this.handleUserInput} addNewTask={this.addNewTask} />
                     </div>
+                    <div>
+                        <Modal selectedTask={this.state.selectedTask} isModalVisible={this.state.isModalVisible} onClose={this.hideModal}/>
+                    </div>
                 </div>
-                <Modal selectedTask={this.state.selectedTask} isModalVisible={this.state.isModalVisible} onHide={() => this.handleModal()} />
-                {/* https://blog.bitsrc.io/build-a-simple-modal-component-with-react-16decdc111a6 */}
             </div>
         );
     }
