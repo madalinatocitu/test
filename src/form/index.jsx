@@ -10,11 +10,26 @@ class Form extends React.Component {
                         <label>FORM</label> <br />
                     </div>
                     <label htmlFor="description">Description:</label>
-                    <input type="text" id="description" value={this.props.newItem.description} placeholder="Enter description..." onChange={this.props.handleUserInput}/> <br />
+                    <input
+                        type="text"
+                        id="description"
+                        value={this.props.newItem.description}
+                        placeholder="Enter description..."
+                        onChange={(e) => this.props.handleUserInput(e, 'description')} /> <br />
+
                     <label htmlFor="date">Date:</label>
-                    <input type="text" id="date" value={this.props.newItem.date} placeholder="Enter date..." onChange={this.props.handleUserInput}/> <br />
+                    <input type="text"
+                        id="date"
+                        value={this.props.newItem.date}
+                        placeholder="Enter date..."
+                        onChange={(e) => this.props.handleUserInput(e, 'date')} /> <br />
+
                     <label htmlFor="notes">Notes:</label>
-                    <input type="text" id="notes" value={this.props.newItem.notes} placeholder="Enter notes..." onChange={this.props.handleUserInput}/>
+                    <input type="text"
+                        id="notes"
+                        value={this.props.newItem.notes}
+                        placeholder="Enter notes..."
+                        onChange={(e) => this.props.handleUserInput(e, 'notes')} />
                 </form>
 
                 <div className="form__button">

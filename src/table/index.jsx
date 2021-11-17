@@ -17,7 +17,7 @@ class Table extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.items.map((item =>
+                        {this.props.items.map(((item, i) =>
                             <tr key={item.no}>
                                 <td>{item.no}</td>
                                 <td id="descriptionId">{item.description}</td>
@@ -34,7 +34,7 @@ class Table extends React.Component {
                                     </select>
                                 </td>
                                 <td>
-                                    <button id="buttonsTable">O</button>
+                                    <button id="buttonsTable" onClick={(e) => this.props.showInfo(e,i)}>O</button>
                                     <button id="buttonsTable">E</button>
                                     <button id="buttonsTable">D</button>
                                 </td>
