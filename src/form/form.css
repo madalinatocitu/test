@@ -1,5 +1,5 @@
 .form__container {
-    border: 2px solid black;
+    border: 2px white solid;
     display:flex;
     flex-flow: column;
     width: 100%;
@@ -9,7 +9,7 @@
 
 label {
     padding-top: 5px;
-    color: blue;
+    color: rgb(158, 73, 158);
 }
 
 input {
@@ -26,14 +26,17 @@ input {
 }
 
 .form__button {
-    color: blue;
     display: flex;
     justify-content: flex-end;
 }
 
 #button_id {
-    color:blue;
+    color: rgb(219, 67, 67);
     border: 1.5px solid black;
     padding: 4px 15px;
     background-color: white;
+}
+
+.form__title {
+    color: rgb(218, 91, 218);
 }

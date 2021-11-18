@@ -8,10 +8,10 @@ class MenuPage extends React.Component {
         return (
             <div className="menu-page__container">
                 <ul>
-                    <li>Home</li>
-                    <li>My tasks</li>
-                    <li>Graph</li>
-                    <li>Help</li>
+                    <li id="home_id">Home</li>
+                    <li id="my-tasks_id">My tasks</li>
+                    <li id="graph_id">Graph</li>
+                    <li id="help_id">Help</li>
                 </ul>
             </div>
         );

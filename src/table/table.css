@@ -3,8 +3,9 @@ table {
 }
 
 table, th, td {
-    border: 2px black solid;
+    border: 2px white solid;
     border-collapse: collapse;
+    color: orange;
 }
 
 th{
@@ -30,7 +31,11 @@ tr, td {
 
 #buttonsTable {
     border: 2px black solid;
-    background-color: white;
+    background-color:rgb(224, 165, 224);
     margin: 3px 2px;
     padding: 1px 3px;
+}
+
+#status {
+    background-color: turquoise;
 }

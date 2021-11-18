@@ -39,8 +39,12 @@ class Table extends React.Component {
                                             this.props.showInfo(e,i);
                                             this.props.showModal();
                                         }}>O</button>
-                                    <button id="buttonsTable">E</button>
-                                    <button id="buttonsTable">D</button>
+                                    <button id="buttonsTable"
+                                        onClick={() => this.props.addRowInForm(i)}
+                                    >E</button>
+                                    <button id="buttonsTable"
+                                        onClick={() => this.props.handleDeleteRow(i)}
+                                    >D</button>
                                 </td>
                             </tr>
                         ))}

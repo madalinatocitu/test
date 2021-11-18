@@ -7,7 +7,7 @@ class Form extends React.Component {
             <div className="form__container">
                 <form >
                     <div className="form__container__title">
-                        <label>FORM</label> <br />
+                        <label className="form__title">FORM</label> <br />
                     </div>
                     <label htmlFor="description">Description:</label>
                     <input

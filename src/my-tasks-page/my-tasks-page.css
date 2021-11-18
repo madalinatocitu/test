@@ -1,5 +1,7 @@
 html, body {
     height: 100%;
+    /* background-color: rgb(230, 216, 202); */
+    background-color: rgba(0, 0, 0, 0.671);
 }
 
 #root {
@@ -19,12 +21,15 @@ html, body {
 
 .my-tasks-page__title {
     /* display: flex; */
-    color: red;
-    border: 2px blue solid;
+    /* background-image: url("./images/tasks.jpg"); */
+    /* background-color: rgb(230, 170, 148); */
+    color: orangered;
+    border: 2px white solid;
     text-align: center;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .my-tasks-page__table-and-form {
@@ -33,7 +38,7 @@ html, body {
     justify-content: space-around;
 }
 
-.my-tasks-page__modal {
+/* .my-tasks-page__modal {
     position: fixed;
     left: 0;
     top: 0;
@@ -43,4 +48,4 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */

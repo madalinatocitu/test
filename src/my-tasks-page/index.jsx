@@ -15,32 +15,37 @@ class MyTasksPage extends React.Component {
                         no: 1,
                         description: "Finish my homework",
                         date: "12/12/2021",
-                        status: ["open", "in progress", "done"]
+                        status: ["open", "in progress", "done"],
+                        notes: ''
                     },
 
                     {
                         no: 2,
                         description: "Walk the dog",
                         date: "02/11/2021",
-                        status: ["open", "in progress", "done"]
+                        status: ["open", "in progress", "done"],
+                        notes: ''
                     },
                     {
                         no: 3,
                         description: "Make the presentation",
                         date: "15/11/2021",
-                        status: ["open", "in progress", "done"]
+                        status: ["open", "in progress", "done"],
+                        notes: ''
                     },
                     {
                         no: 4,
                         description: "Volunteer activity form",
                         date: "20/11/2021",
-                        status: ["open", "in progress", "done"]
+                        status: ["open", "in progress", "done"],
+                        notes: ''
                     },
                     {
                         no: 5,
                         description: "Finish the OOP project",
                         date: "26/01/2022",
-                        status: ["open", "in progress", "done"]
+                        status: ["open", "in progress", "done"],
+                        notes: ''
                     }
                 ]
             },
@@ -52,11 +57,6 @@ class MyTasksPage extends React.Component {
             selectedTask: null,
             isModalVisible: false
         }
-        this.addNewTask = this.addNewTask.bind(this);
-        this.handleUserInput = this.handleUserInput.bind(this);
-        this.showInfo = this.showInfo.bind(this);
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);
     }
 
     addNewTask(e) {
@@ -72,6 +72,11 @@ class MyTasksPage extends React.Component {
                     notes: this.state.form.notes,
                     status: ["open", "in progress", "done"]
                 }]
+            },
+            form: {
+                description: '',
+                date: '',
+                notes: ''
             }
         })
     }
@@ -94,10 +99,8 @@ class MyTasksPage extends React.Component {
         console.log(this.state.table.items[index]);
         this.setState({
             selectedTask: this.state.table.items[index],
-            isModalVisible: true
         });
         console.log("functioneaza");
-        // console.log(this.state.isModalVisible);
     }
 
     showModal() {
@@ -108,12 +111,51 @@ class MyTasksPage extends React.Component {
         console.log(this.state.isModalVisible);
     }
 
-    hideModal() {
-        this.setState(
-            { isModalVisible: false }
+    handleClick (e) {
+        if(this.state.isModalVisible) {
+            this.closeModal();
+            return;
+        }
+        this.setState( 
+            {isModalVisible: true}
         );
-        console.log("modalul a disparut");
-        // console.log(this.state.isModalVisible);
+        e.stopPropagation();
+        document.addEventListener("click", this.closeModal);
+    };
+
+    closeModal () {
+        this.setState(
+            { isModalVisible: false}
+        );
+        document.removeEventListener("click", this.closeModal)
+    };
+
+    handleDeleteRow (i) {
+        console.log("am apasat butonul de delete");
+        let rows = this.state.table.items
+        //console.log(rows);
+        rows.splice(i,1)
+        //console.log(rows);
+        this.setState({
+            items: rows
+        });
+        console.log(this.state.table.items);
+    }
+
+    addRowInForm (i) {
+        console.log("am apasat butonul de edit");
+        console.log(this.state.table.items[i].description);
+        this.setState({
+            form: {
+                description: this.state.table.items[i].description,
+                date: this.state.table.items[i].date,
+                notes: this.state.table.items[i].notes || '-'
+                // {(!this.state.table.items[i].notes)
+                // ? notes:this.state.items[i].notes,
+                // : null}
+            }
+        });
+
     }
 
     render() {
@@ -123,11 +165,21 @@ class MyTasksPage extends React.Component {
                 <div className="my-tasks-page__container">
                     <h2 className="my-tasks-page__title">My tasks</h2>
                     <div className="my-tasks-page__table-and-form">
-                        <Table items={this.state.table.items} showInfo={this.showInfo} showModal={this.showModal}/>
-                        <Form newItem={this.state.form} handleUserInput={this.handleUserInput} addNewTask={this.addNewTask} />
+                        <Table
+                            items={this.state.table.items}
+                            showInfo={(e, index) => this.showInfo(e, index)}
+                            showModal={() => this.showModal()}
+                            handleDeleteRow={(i) => this.handleDeleteRow(i)} 
+                            addRowInForm={(i) => this.addRowInForm(i)}/>
+                        <Form
+                            newItem={this.state.form}
+                            handleUserInput={(e, inputName) => this.handleUserInput(e, inputName)}
+                            addNewTask={(e) => this.addNewTask(e)} />
                     </div>
-                    <div>
-                        <Modal selectedTask={this.state.selectedTask} isModalVisible={this.state.isModalVisible} onClose={this.hideModal}/>
+                    <div> 
+                        <Modal selectedTask={this.state.selectedTask}
+                            isModalVisible={this.state.isModalVisible}
+                            handleClick={(e) => this.handleClick(e)}/>
                     </div>
                 </div>
             </div>

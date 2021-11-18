@@ -8,32 +8,30 @@ class Modal extends React.Component {
         return (
             this.props.selectedTask
                 ?
-            
-                    (this.props.isModalvisible === true)  
-                        ?
-                            null
-                           
-                        :
-                        <div className="modal_main-container">  
-                            <div className="modal-content">
-                                <div className="modal-header">
-                                    <h4 className="modal-title">Modal title</h4>
-                                </div>
-                                <div className="modal-body">
-                                    <div> Description: {this.props.selectedTask.description}</div>
-                                    <div> Date: {this.props.selectedTask.date} </div>
-                                    <div> Status: Open </div>
-                                </div>
-                                <div className="modal-footer">
-                                    <button onClick={() => this.props.onClose()}>Close modal</button>
-                                </div>
+
+                (!this.props.isModalVisible)
+                    ?
+                    null
+
+                    :
+                    <div className="modal_main-container" onClick={(e) => this.props.handleClick(e)}>
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title">Task {this.props.selectedTask.no}</h4>
                             </div>
-                            {/* {this.props.selectedTaskNotes
-                                ? <div> Notes: {this.props.selectedTaskNotes}</div>
-                                : null} */}
-                            {/* pentru randurile din tabel care au fost adaugate folosind formularul (deci au si varianta de notes) */}
+                            <div className="modal-body">
+                                <div> Description: {this.props.selectedTask.description}</div>
+                                <div> Date: {this.props.selectedTask.date} </div>
+                                <div> Status: Open </div>
+                                {/* <div> Noes: {this.props.selectedTask.notes || '-'}</div> */}
+                                {this.props.selectedTask.notes
+                                    ? <div> Notes: {this.props.selectedTask.notes}</div>
+                                    : null
+                                }
+                            </div>
                         </div>
-        
+                    </div>
+
                 : null
         );
     }

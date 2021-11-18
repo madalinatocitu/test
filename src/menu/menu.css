@@ -1,5 +1,5 @@
 .menu-page__container {
-    border: 2px dotted rgb(233, 161, 161);
+    /* border: 2px dotted rgb(233, 161, 161); */
     height: 100%;
 }
 ul {
@@ -10,9 +10,26 @@ ul {
 
 li {
     display: block;
-    color: blue;
-    border: 2px black solid;
+    border: 2px white solid;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#home_id {
+    color: red;
+}
+
+#my-tasks_id {
+    color: purple;
+}
+
+#graph_id {
+    color: rgb(89, 133, 23);
+}
+
+#help_id {
+    color: blueviolet;
+
 }
