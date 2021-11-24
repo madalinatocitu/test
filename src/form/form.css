@@ -5,11 +5,14 @@
     width: 100%;
     margin-left: 5px;
     padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(115deg, rgb(0, 98, 178) 10%, rgb(76, 175, 255) 90%);
 }
 
 label {
     padding-top: 5px;
-    color: rgb(158, 73, 158);
+    color: rgb(209, 159, 209);
+    font-weight: bold;
 }
 
 input {
@@ -31,12 +34,16 @@ input {
 }
 
 #button_id {
-    color: rgb(219, 67, 67);
+    /* color: white; */
     border: 1.5px solid black;
     padding: 4px 15px;
     background-color: white;
+    border-radius: 10px;
+    background-color: rgb(29, 29, 151);
 }
 
 .form__title {
-    color: rgb(218, 91, 218);
+    color: rgb(221, 90, 221);
+    font-weight: bolder;
+    font-size: large;
 }

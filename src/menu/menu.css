@@ -10,26 +10,26 @@ ul {
 
 li {
     display: block;
-    border: 2px white solid;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
+    padding: 20px 25px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+    
 #home_id {
-    color: red;
+    color: white;
+    background-color: rgb(0, 98, 178);
 }
 
 #my-tasks_id {
-    color: purple;
+    color: white;
+    background-color: rgb(25, 124, 204);
 }
 
 #graph_id {
-    color: rgb(89, 133, 23);
+    color: white;
+    background-color: rgb(51, 149, 229);
 }
 
 #help_id {
-    color: blueviolet;
-
+    color: white;
+    background-color: rgb(76, 175, 255);
 }

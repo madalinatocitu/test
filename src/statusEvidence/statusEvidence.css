@@ -1,0 +1,19 @@
+.my-tasks-page__status {
+    margin-bottom: 20px;
+}
+
+.status-evidence {
+    position: relative;
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    margin: 5px 0;
+    background: rgba(119, 151, 192, 0.938);
+    color: rgb(114, 34, 101);
+    border-radius: 3px;
+}
+
+.status-evidence__span {
+    font-weight: bold;
+}
