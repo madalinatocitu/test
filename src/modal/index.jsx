@@ -9,7 +9,7 @@ class Modal extends React.Component {
             this.props.selectedTask
                 ?
 
-                (!this.props.isModalVisible)
+                !this.props.isModalVisible
                     ?
                     null
 
@@ -17,15 +17,27 @@ class Modal extends React.Component {
                     <div className="modal_main-container" onClick={(e) => this.props.handleClick(e)}>
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h4 className="modal-title">Task {this.props.selectedTask.no}</h4>
+                                <h3 className="modal-title">Task {this.props.selectedTask.no}</h3>
                             </div>
                             <div className="modal-body">
-                                <div> Description: {this.props.selectedTask.description}</div>
-                                <div> Date: {this.props.selectedTask.date} </div>
-                                <div> Status: Open </div>
-                                {/* <div> Noes: {this.props.selectedTask.notes || '-'}</div> */}
+                                <div>
+                                    <span className="modal-body__description"> Description: </span>
+                                    <span className="modal-body__info"> {this.props.selectedTask.description} </span>
+                                </div>
+                                <div>
+                                    <span className="modal-body__description"> Date: </span>
+                                    <span className="modal-body__info">{this.props.selectedTask.date} </span>
+                                </div>
+                                <div>
+                                    <span className="modal-body__description"> Status:</span>
+                                    <span className="modal-body__info"> {this.props.selectedTask.currentStatus} </span>
+                                </div>
+                                {/* <div> Notes: {this.props.selectedTask.notes || '-'}</div> */}
                                 {this.props.selectedTask.notes
-                                    ? <div> Notes: {this.props.selectedTask.notes}</div>
+                                    ? <div>
+                                        <span className="modal-body__description"> Notes: </span>
+                                        <span className="modal-body__info"> {this.props.selectedTask.notes} </span>
+                                    </div>
                                     : null
                                 }
                             </div>

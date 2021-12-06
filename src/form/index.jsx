@@ -37,9 +37,9 @@ class Form extends React.Component {
                     <div className="form__button">
                         <button id="button_id" 
                         onClick={this.props.addNewTask}
-                        disabled={this.props.dis}
+                        disabled={this.props.isAddButtonDisabled}
                         style={{
-                            color: this.props.dis ? 'grey' : 'red'
+                            color: this.props.isAddButtonDisabled ? 'grey' : 'red'
                         }}
                         >Add task</button>
                         {/* disabled={true} -> butonul nu este activ */}

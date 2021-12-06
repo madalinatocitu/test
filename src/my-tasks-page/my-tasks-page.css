@@ -4,6 +4,10 @@ html, body {
     background-image: url("./images/blue_image.jpg");
 }
 
+/* html {
+    overflow: hidden;
+} */
+
 #root {
     height: 100%;
 }

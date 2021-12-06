@@ -1,5 +1,5 @@
 import React from 'react';
-import './statusEvidence.css';
+import './status-evidence.css';
 
 class StatusEvidence extends React.Component {
     render() {

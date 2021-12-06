@@ -1,11 +1,12 @@
 import React from 'react';
+//import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './my-tasks-page.css';
 import MenuPage from '../menu/';
 import Table from '../table';
 import Form from '../form';
 import Modal from '../modal';
-import ButtonCreateNew from '../button_create_new';
-import StatusEvidence from '../statusEvidence';
+import ButtonCreateNew from '../create-new-button';
+import StatusEvidence from '../status-evidence';
 
 class MyTasksPage extends React.Component {
     constructor(props) {
@@ -206,24 +207,37 @@ class MyTasksPage extends React.Component {
     }
 
     countStatus(e, index) {
-        const copieItems = this.state.table.items.slice();
-        copieItems.forEach((copie, index2) => {
+        const updatedItems = this.state.table.items.map((item, index2) => {
             if (index === index2) {
-                copie.currentStatus = e.target.value;
+                return {
+                    ...item,
+                    currentStatus: e.target.value
+                }
+            } else {
+                return item
             }
         });
-        this.setState({ copieItems });
+        this.setState({table: {items: updatedItems}});
     }
 
     countPriority(e, index) {
-        const copieItems = this.state.table.items.slice();
-        copieItems.forEach((copie, index2) => {
+        const updatedItems = this.state.table.items.map((item, index2) => {
             if (index === index2) {
-                copie.currentPriority = e.target.value;
+                return {
+                    ...item,
+                    currentPriority: e.target.value
+                }
+            } else {
+                return item
             }
         });
-        this.setState({ copieItems });
+        this.setState({ table: {items: updatedItems}});
+
+        // setTimeout(() => {
+        //     console.log('aaaa', this.state)
+        // }, 2000);
     }
+
 
     changeColor (e, index) {
         if(this.state.table.items[index].currentStatus === 'done') {
@@ -296,7 +310,7 @@ class MyTasksPage extends React.Component {
                             newItem={this.state.form}
                             handleUserInput={(e, inputName) => this.handleUserInput(e, inputName)}
                             addNewTask={(e) => this.addNewTask(e)}
-                            dis={!this.state.form.description || !this.state.form.date} />
+                            isAddButtonDisabled={!this.state.form.description || !this.state.form.date} />
                     </div>
                     <div>
                         <Modal selectedTask={this.state.selectedTask}

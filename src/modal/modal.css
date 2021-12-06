@@ -1,7 +1,4 @@
 .modal_main-container {
-    /* border: 2px solid black;
-    margin-top: 5px;
-    color: blue; */
     position: fixed;
     left: 0;
     top: 0;
@@ -16,11 +13,14 @@
 .modal-content {
     width: 500px;
     background-color: #fff;
-    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .modal-header{
     padding: 10px;
+    background-color: rgb(224, 165, 224);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .modal-title {
@@ -31,8 +31,14 @@
 
 .modal-body {
     padding: 10px;
-    border-top: 1 px solid #eee;
-    border-bottom: 1px solid #eee;
     color: blue;
+}
+
+.modal-body__description {
+    color: rgb(0, 98, 178);
+}
+
+.modal-body__info {
+    color: rgb(76, 175, 255);
 }
 
