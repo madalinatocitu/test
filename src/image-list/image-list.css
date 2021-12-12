@@ -1,0 +1,19 @@
+.image-list__container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.image-list__footer {
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+}
+
+.image-list__list {
+    width: 500;
+    height: 450;
+}

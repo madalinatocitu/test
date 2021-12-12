@@ -1,6 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-// Navigate
+import { Route, Routes, Navigate } from "react-router-dom";
 // import { Refreshable } from "react-router-refreshable";
 import HomePage from "./home";
 import MyTasksPage from "./my-tasks-page";
@@ -12,11 +11,11 @@ class App extends React.Component {
         return (
             <div>
                 <Routes>
-                    <Route path="*" element={<HomePage />} />
+                    <Route path="/home" element={<HomePage />} />
                     <Route path="/my-tasks-page" element={<MyTasksPage />} />
                     <Route path="/graph" element={<GraphPage />} />
                     <Route path="/help" element={<HelpPage />} />
-                    {/* <Route component={Error} /> */}
+                    <Route path="*" element={ <Navigate to = "/home"/> } />
                 </Routes>
             </div>
         )

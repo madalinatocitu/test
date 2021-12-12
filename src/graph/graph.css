@@ -1,0 +1,30 @@
+.graph-page__container {
+    display: flex;
+    flex-flow: row;
+}
+
+.graph-page__appbar {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    
+}
+
+.graph-page__tab {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+.graph-page__container2 {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+/* .graph-page__tabPanel {
+    border: 2px solid blue;
+    height: 230px;
+} */
