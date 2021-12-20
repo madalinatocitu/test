@@ -34,7 +34,7 @@ class Table extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.items.map(((item, i) =>
+                        {this.props.items.map(((item,  i) =>
                             <tr key={item.no}>
                                 <td style={{
                                     color: getColor(item),

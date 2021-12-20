@@ -28,3 +28,7 @@ h2 {
     display: flex;
     text-align: center;
 }
+
+.modal-box {
+    text-align: center;
+}

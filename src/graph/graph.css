@@ -1,7 +1,6 @@
 .graph-page__container {
     display: flex;
     flex-flow: row;
-    height: 100%;
 }
 
 .graph-page__appbar {

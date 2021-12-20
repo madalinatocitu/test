@@ -1,5 +1,4 @@
 import React from 'react';
-//import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './my-tasks-page.css';
 import MenuPage from '../menu/';
 import Table from '../table';
