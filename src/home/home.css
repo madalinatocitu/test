@@ -1,3 +1,49 @@
+.root {
+    overflow-x: initial;
+    background-color: red;
+}
 .home-page__container {
-    width: 120px;
+    width: 1200px;
+    display: flex;
+    flex-flow: row;
+    height: 400px;
+}
+
+.home__table-container {
+    margin-left: 70px;
+    margin-right: 30px;
+}
+
+.home__table-head {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.home__table-row {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+.TableCell {
+    color: red;
+}
+
+.home__table-cell-header {
+    background-color: rgb(195, 124, 241);
+    text-align: center;
+    font-weight: bold;
+    color: red;
+}
+
+.home__table-cell {
+    background-color: rgb(187, 210, 223);
+}
+
+.button {
+    width: 100px;
+    background-color: rgb(187, 210, 223);
 }
