@@ -1,0 +1,49 @@
+.form__container {
+    border: 2px white solid;
+    display:flex;
+    flex-flow: column;
+    width: 100%;
+    margin-left: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(115deg, rgb(0, 98, 178) 10%, rgb(76, 175, 255) 90%);
+}
+
+label {
+    padding-top: 5px;
+    color: rgb(209, 159, 209);
+    font-weight: bold;
+}
+
+input {
+    margin-top: 8px;
+    border: 1.5px black solid;
+}
+
+.form__container__title {
+    padding-bottom: 10px;
+}
+
+#description, #date, #notes {
+    margin-left: 10px;
+}
+
+.form__button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#button_id {
+    /* color: white; */
+    border: 1.5px solid black;
+    padding: 4px 15px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: rgb(29, 29, 151);
+}
+
+.form__title {
+    color: rgb(221, 90, 221);
+    font-weight: bolder;
+    font-size: large;
+}

@@ -1,0 +1,4 @@
+.list-hotels__container {
+    display: flex;
+    flex-flow: row;
+}

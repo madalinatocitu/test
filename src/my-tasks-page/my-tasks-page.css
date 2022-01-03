@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.671);
+    background-image: url("./images/blue_image.jpg");
+}
+
+/* html {
+    overflow: hidden;
+} */
+
+#root {
+    height: 100%;
+}
+
+.my-tasks-page {
+    display: flex;
+    height: 100%;
+}
+
+.my-tasks-page__container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.my-tasks-page__title {
+    text-align: center;
+    color: rgb(153, 0, 76);
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: 'Raleway', cursive;
+    font-weight: 100;
+    position: relative;
+    background: linear-gradient(to right, rgb(0, 98, 178), #eee, rgb(0, 98, 178));
+}
+
+.my-tasks-page__table-and-form {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}

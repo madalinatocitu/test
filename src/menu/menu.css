@@ -1,0 +1,36 @@
+.menu-page__container {
+    /* border: 2px dotted rgb(233, 161, 161); */
+    height: 100%;
+}
+ul {
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-right: 7px;
+    /* width: 100px; */
+}
+
+li {
+    display: block;
+    padding: 20px 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+    
+#home_id {
+    color: white;
+    background-color: rgb(0, 98, 178);
+}
+
+#my-tasks_id {
+    color: white;
+    background-color: rgb(25, 124, 204);
+}
+
+#graph_id {
+    color: white;
+    background-color: rgb(51, 149, 229);
+}
+
+#help_id {
+    color: white;
+    background-color: rgb(76, 175, 255);
+}
